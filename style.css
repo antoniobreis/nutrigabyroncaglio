@@ -66,6 +66,53 @@ ul {
 }
 
 /* ===========================
+   BANNER DE COOKIES
+=========================== */
+.cookie-consent {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--verde-principal);
+    color: var(--bege-claro);
+    padding: 20px;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15);
+    z-index: 1001;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.cookie-consent.show {
+    transform: translateY(0);
+}
+
+.cookie-consent-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.cookie-consent-text {
+    font-size: 14px;
+    line-height: 1.5;
+    opacity: 0.9;
+}
+
+.cookie-consent-text a {
+    color: var(--bege-claro);
+    text-decoration: underline;
+    font-weight: 500;
+    transition: var(--transicao);
+}
+
+.cookie-consent-text a:hover {
+    color: var(--branco);
+}
+
+/* ===========================
    BOTÕES
 =========================== */
 .cookie-consent-btn {
