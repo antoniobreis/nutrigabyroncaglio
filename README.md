@@ -16,8 +16,5 @@ Apresentar os serviços de nutrição com uma abordagem humanizada, gerando auto
 * `css/`: Estilização e variáveis de cores da marca.
 * `js/`: Scripts de interação e menu.
 
-## 🔗 Deploy
-O projeto está rodando em produção na **Hostinger**.
-
 ---
 **Desenvolvido por:** [Stack Soluções Digitais](https://soustack.com.br)
