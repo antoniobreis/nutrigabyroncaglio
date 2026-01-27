@@ -16,5 +16,7 @@ Apresentar os serviços de nutrição com uma abordagem humanizada, gerando auto
 * `css/`: Estilização e variáveis de cores da marca.
 * `js/`: Scripts de interação e menu.
 
+
 ---
+
 **Desenvolvido por:** [Stack Soluções Digitais](https://soustack.com.br)
