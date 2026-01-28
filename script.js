@@ -391,9 +391,16 @@ const cookieConsent = new CookieConsent();
 // ===========================
 // ANO AUTOMÁTICO NO RODAPÉ
 // ===========================
-document.addEventListener('DOMContentLoaded', function() {
+// Fallback múltiplo para compatibilidade com Safari/iPhone
+function updateYear() {
     const yearSpan = document.getElementById('current-year');
     if (yearSpan) {
         yearSpan.textContent = new Date().getFullYear();
     }
-});
+}
+
+// Tentativa 1: DOMContentLoaded
+document.addEventListener('DOMContentLoaded', updateYear);
+
+// Tentativa 2: window.onload (fallback para Safari)
+window.onload = updateYear;
