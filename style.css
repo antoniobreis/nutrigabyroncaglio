@@ -1228,65 +1228,54 @@ ul {
     text-decoration: underline;
 }
 
-/* Banner de Cookies Mobile - Correção Crítica iPhone/Safari */
+/* ===========================
+   RESET TOTAL DO LAYOUT NO MOBILE - ANTI-CONFLITO IPHONE */
 @media (max-width: 768px) {
+    /* RESET TOTAL DO BANNER */
     .cookie-consent {
-        display: block !important; /* Remove Flexbox */
-        text-align: center !important;
-        padding-bottom: calc(20px + env(safe-area-inset-bottom)) !important; /* Proteção contra barra do iPhone */
-        z-index: 2147483647 !important; /* Valor MÁXIMO do CSS para ficar acima do WhatsApp */
+        display: block !important; /* Força quebra de linha, MATANDO o flex lateral */
+        flex-direction: initial !important; 
+        justify-content: initial !important;
+        
+        position: fixed !important;
         bottom: 0 !important;
         left: 0 !important;
         width: 100% !important;
-        box-sizing: border-box !important;
-        background: var(--verde-principal) !important;
-        color: var(--bege-claro) !important;
-        padding: 20px !important;
-        box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15) !important;
-        transform: translateY(100%) !important;
-        transition: transform 0.3s ease !important;
+        height: auto !important;
+        
+        background-color: #fff !important; /* Garante fundo sólido */
+        box-shadow: 0 -4px 10px rgba(0,0,0,0.2) !important;
+        padding: 20px 20px 40px 20px !important; /* Padding extra embaixo pro iPhone */
+        
+        /* Z-INDEX NUCLEAR: Garante que fique acima do WhatsApp */
+        z-index: 2147483647 !important; 
     }
-    
-    .cookie-consent.show {
-        transform: translateY(0) !important;
-    }
-    
-    .cookie-consent .cookie-consent-text {
-        display: block !important;
-        margin-bottom: 15px !important;
-        font-size: 13px !important;
-        width: 100% !important;
-        padding: 0 10px !important;
-        line-height: 1.4 !important;
-        opacity: 0.9 !important;
-    }
-    
-    .cookie-consent .cookie-consent-text a {
-        color: var(--bege-claro) !important;
-        text-decoration: underline !important;
-        font-weight: 500 !important;
-    }
-    
-    .cookie-consent .cookie-consent-btn {
-        display: block !important;
-        width: 90% !important; /* Botão largo para facilitar o clique */
-        margin: 0 auto !important; /* Centralizado */
-        height: 44px !important; /* Altura mínima clicável da Apple */
-        position: relative !important;
-        z-index: 2147483648 !important; /* 1 ponto acima do banner */
-        cursor: pointer !important;
-        max-width: 300px !important;
-        padding: 0 24px !important;
+
+    /* TEXTO */
+    .cookie-consent p {
+        margin: 0 0 15px 0 !important;
+        text-align: center !important;
         font-size: 14px !important;
-        background: linear-gradient(135deg, var(--bege-claro) 0%, var(--branco) 100%) !important;
-        color: var(--verde-principal) !important;
-        border: 2px solid var(--bege-claro) !important;
-        border-radius: 50px !important;
-        font-family: var(--font-titulo) !important;
-        font-weight: 600 !important;
-        transition: all 0.3s ease !important;
-        white-space: nowrap !important;
-        box-shadow: 0 4px 15px rgba(237, 233, 224, 0.3) !important;
+        width: 100% !important;
+    }
+
+    /* BOTÃO (MUITO GRANDE PRA CLICAR FÁCIL) */
+    .cookie-consent button {
+        display: block !important;
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 15px 0 !important;
+        font-size: 16px !important;
+        cursor: pointer !important;
+    }
+
+    /* CORREÇÃO DO CONFLITO WHATSAPP */
+    /* Se o container do whatsapp tiver largura total, ele bloqueia cliques. Vamos travar ele. */
+    .whatsapp-button-container, #whatsapp-btn, .whatsapp-float {
+        z-index: 9999 !important; /* Menor que o cookie banner */
+        width: 60px !important; /* Força largura pequena pra não cobrir a tela */
+        right: 20px !important;
+        bottom: 20px !important;
     }
 }
 
