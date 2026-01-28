@@ -387,3 +387,13 @@ class CookieConsent {
 
 // Inicializar banner de cookies quando o DOM estiver pronto
 const cookieConsent = new CookieConsent();
+
+// ===========================
+// ANO AUTOMÁTICO NO RODAPÉ
+// ===========================
+document.addEventListener('DOMContentLoaded', function() {
+    const yearSpan = document.getElementById('current-year');
+    if (yearSpan) {
+        yearSpan.textContent = new Date().getFullYear();
+    }
+});
