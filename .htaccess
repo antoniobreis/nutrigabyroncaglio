@@ -1,5 +1,10 @@
 RewriteEngine On
 
+# 1. ESSA REGRA NOVA: Força a remoção do index.html da URL
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.html\ HTTP/
+RewriteRule ^index\.html$ / [R=301,L]
+
+# 2. Mantém a URL limpa para as outras páginas (como a política)
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}\.html -f
 RewriteRule ^(.*)$ $1.html [NC,L]
