@@ -201,38 +201,6 @@ window.addEventListener('scroll', debounce(highlightActiveLink, 15));
 // ===========================
 console.log('%c💚 Site desenvolvido com carinho para Gabrielly Roncaglio - Nutricionista', 'color: #808571; font-size: 14px; font-weight: bold;');
 
-// ===========================
-// FORMULÁRIO DE CONTATO (Opcional)
-// ===========================
-// Caso adicione um formulário no futuro, use esta estrutura:
-/*
-const form = document.getElementById('contato-form');
-if (form) {
-    form.addEventListener('submit', (e) => {
-        e.preventDefault();
-        
-        // Obter dados do formulário
-        const formData = new FormData(form);
-        const nome = formData.get('nome');
-        const email = formData.get('email');
-        const mensagem = formData.get('mensagem');
-        
-        // Validação simples
-        if (!nome || !email || !mensagem) {
-            alert('Por favor, preencha todos os campos.');
-            return;
-        }
-        
-        // Aqui você pode integrar com um serviço de e-mail
-        // ou redirecionar para WhatsApp com a mensagem
-        const whatsappMessage = `Olá! Meu nome é ${nome}. ${mensagem}`;
-        const whatsappUrl = `https://wa.me/5547999999999?text=${encodeURIComponent(whatsappMessage)}`;
-        
-        window.open(whatsappUrl, '_blank');
-        form.reset();
-    });
-}
-*/
 
 // ===========================
 // GALERIA DE IMAGENS - NUTRIÇÃO NA PRÁTICA
