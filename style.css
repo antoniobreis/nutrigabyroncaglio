@@ -62,7 +62,7 @@ ul {
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 10px;
 }
 
 /* ===========================
@@ -478,7 +478,7 @@ ul {
 
 .servico-card {
     background: var(--bege-claro);
-    padding: 40px 32px;
+    padding: 30px 20px;
     border-radius: 16px;
     text-align: center;
     transition: var(--transicao);
@@ -1549,6 +1549,28 @@ ul {
         grid-template-columns: repeat(2, 1fr);
         gap: 16px;
     }
+    
+    /* Serviços - tablets */
+    .servicos-grid {
+        gap: 24px;
+    }
+    
+    .servico-card {
+        padding: 32px 24px;
+    }
+    
+    .servico-icon {
+        font-size: 50px;
+        margin-bottom: 16px;
+    }
+    
+    .servico-card h3 {
+        font-size: 20px;
+    }
+    
+    .servico-card p {
+        font-size: 15px;
+    }
 }
 
 @media (max-width: 640px) {
@@ -1569,6 +1591,32 @@ ul {
         grid-template-columns: 1fr;
     }
     
+    /* Cards de serviços no mobile - reduzidos */
+    .servicos-grid {
+        gap: 16px;
+    }
+    
+    .servico-card {
+        padding: 20px 18px;
+        flex-basis: 100% !important;
+        min-width: auto !important;
+    }
+    
+    .servico-icon {
+        font-size: 32px;
+        margin-bottom: 10px;
+    }
+    
+    .servico-card h3 {
+        font-size: 18px;
+        margin-bottom: 8px;
+    }
+    
+    .servico-card p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+    
     .btn-large {
         padding: 16px 32px;
         font-size: 16px;
@@ -1587,7 +1635,8 @@ ul {
     }
 
     .nutricao-na-pratica-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
     }
 
     .gallery-modal-content {
@@ -1615,6 +1664,7 @@ ul {
     }
 
     .contato-galeria-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
     }
 }
